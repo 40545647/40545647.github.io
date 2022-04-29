@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<title></title>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/modal.css">
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+	<!-- Cards -->
+	<section class="featured-cards">
+		<div class="container">
+	        <div class="row">
+				<div class="col-md-8 offset-md-2">
+					<h2 class="mt-5 text-center">Quizaroo!</h2>
+					<br>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-6 col-lg-4">
+					<div class="box available">
+						<span>#1</span>
+						<h4>Biology Quiz</h4>
+						<p class="hideDesc">Test your knowledge in the field of biology! These question will help you refresh your knowledge.</p>
+						<img src="img/science_bio_img.jpg">
+						<a id="Q1" class="play-txt">PLAY</a>
+						<p class="quizInfo">
+							<span class="question-no-info"><i class="bi bi-patch-question-fill"></i> 5</span>
+							<br> 
+							<span class="time-info"><i class="bi bi-watch"></i> 75s</span>
+							<br> 
+							<i class="bi bi-star-fill iconSize">
+								<i class="bi bi-star-half iconSize"></i>
+							</i><i class="bi bi-star iconSize"></i>
+						</p>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-4">
+					<div class="box">
+						<span>--</span>
+						<h4>Coming Soon</h4>
+						<p class="hideDesc"> Sorry! <br> Under construction, <br> Check again soon!</p>
+						<img src="img/english_img.jpg" alt="">
+						<p class="quizInfo">
+							<span class="question-no-info"><i class="bi bi-patch-question-fill"></i> 5</span>
+							<br> 
+							<span class="time-info"><i class="bi bi-watch"></i> 80s</span>
+							<br> 
+							<i class="bi bi-star-fill iconSize">
+							</i><i class="bi bi-star iconSize">
+							</i><i class="bi bi-star iconSize"></i>
+						</p>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-4">
+					<div class="box">
+						<span>--</span>
+						<h4>Coming Soon</h4>
+						<p class="hideDesc">Sorry! <br> Under construction, <br> Check again soon!</p>
+						<img src="img/math_img.jpg" alt="">
+						<p class="quizInfo">
+							<span class="question-no-info"><i class="bi bi-patch-question-fill"></i> 10</span>
+							<br> 
+							<span class="time-info"><i class="bi bi-watch"></i> 90s</span>
+							<br> 
+							<i class="bi bi-star-fill iconSize">
+							</i><i class="bi bi-star-fill iconSize">
+							</i><i class="bi bi-star iconSize"></i>
+						</p>
+					</div>
+				</div>
+	<!-- End of Cards -->
+
+	<!-- Modals -->
+    <div class="info_box">
+        <div class="info-title"><span>Rules</span></div>
+        <div class="info-list">
+            <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
+            <div class="info">2. Once you select your answer, it cannot be undone.</div>
+            <div class="info">3. You cannot select any option once the timer runs out.</div>
+            <div class="info">4. You cannot exit from the quiz once it has started.</div>
+            <div class="info">5. You need atleast 3 points to pass.</div>
+    	</div>
+    	<div class="buttons">
+            <button class="quit">Cancel</button>
+            <button class="restart">Start Quiz</button>
+        </div>
+    </div>
+
+    <div class="quiz_box">
+        <header>
+            <div class="title">Biology Quiz</div>
+            <div class="timer">
+                <div class="time_left_txt">Time Left</div>
+                <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="question_text">
+            </div>
+            <div class="option_list">
+            </div>
+        </section>
+        <footer>
+            <div class="question_no_modal">
+            </div>
+        </footer>
+    </div>
+
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">All done!</div>
+        <div class="score_text">
+        </div>
+        <div class="buttons">
+            <button class="quit">Done</button>
+        </div>
+    </div>
+	<!-- End of Modals -->
+
+	<!-- Scripts -->
+	<script src="js/questions.js"></script>
+	<script src="js/main.js"></script>
+	<!-- End of Scripts -->
+
+	<!-- Audio -->
+	<audio id="background_1" src="audio/background_1.mp3" preload="auto"></audio>
+	<audio id="correct_chime" src="audio/correct_chime.mp3" preload="auto"></audio>
+	<audio id="incorrect_chime" src="audio/incorrect_chime.mp3" preload="auto"></audio>
+	<audio id="perfect_score" src="audio/perfect_score.mp3" preload="auto"></audio>
+	<audio id="pass_sound" src="audio/pass_sound.mp3" preload="auto"></audio>
+	<audio id="fail_sound" src="audio/fail_sound.mp3" preload="auto"></audio>
+	<!-- ** All audio above acquired from freesound.org ** 
+	In order:
+ 	sound 1 by tamakari ( https://freesound.org/people/tamakari/sounds/105043/ ) licensed under CCBYNC 3.0
+	sound 2 by LittleRainySeasons ( https://freesound.org/people/LittleRainySeasons/sounds/335908/ ) licensed under CCBYNC 3.0
+	sound 3 by AbdrTar ( https://freesound.org/people/AbdrTar/sounds/558121/ ) licensed under CCBYNC 3.0
+	sound 4 by FoolBoyMedia ( https://freesound.org/people/FoolBoyMedia/sounds/397434/ ) licensed under CCBYNC 3.0
+	sound 5 by plasterbrain ( https://freesound.org/people/plasterbrain/sounds/397355/ ) licensed under CCBYNC 3.0
+	sound 6 by Benboncan ( https://freesound.org/people/Benboncan/sounds/73581/ ) licensed under CCBYNC 3.0
+	End of Audio -->
+</body>
+</html>

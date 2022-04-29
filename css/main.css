@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+body {
+    background-color: #091014 !important;
+}
+
+.featured-cards h2 {
+    position: relative;
+    margin-bottom: 35px;
+    font-family: 'Luckiest Guy';
+    font-size: 100px;
+    color: white;
+}
+.featured-cards h2::after {
+    content: "";
+    width: 120px;
+    height: 3px;
+    display: inline-block;
+    background: #fca311;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: -20px;
+    margin: 0 auto;
+}
+
+h4 {
+    color: white;
+}
+
+.featured-cards .box {
+    padding: 50px 30px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.10);
+    transition: 0.5s;
+    position: relative;
+    background-color: black;
+    max-height: 230px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+.featured-cards .box:hover {
+	padding: 30px 30px 70px 30px;
+	box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.20);
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.featured-cards .box img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: -1;
+	opacity: 0;
+	transition: all ease 1s; 
+}
+.featured-cards .box:hover img {
+	opacity: 1;
+}
+.featured-cards .box span {
+    display: block;
+    font-size: 56px;
+    font-weight: 700;
+    color: #6b6060;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    line-height: normal;
+}
+.featured-cards .box h4 a {
+	font-size: 24px;
+	font-weight: 600;
+	padding: 0;
+	margin: 20px 0;
+	color: #dadada;
+	text-decoration: none;
+}
+.featured-cards .box p {
+	color: #aaaaaa;
+	font-size: 15px;
+	margin: 0;
+	padding: 0;
+}
+.featured-cards .box:hover span,
+.featured-cards .box:hover h4 a,
+.featured-cards .box:hover p {
+  	color: white;
+}
+
+.box a {
+    display: none;
+}
+.box:hover a {
+    display: block;
+}
+
+  .play-txt{
+    font-size: 50px !important;
+    position: absolute;
+    color: white;
+    display: none;
+    /* right: 100px; */
+    top: 130px;
+    font-family: 'Alfa Slab One';
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .box:hover .play-txt{
+    display: block;
+  }
+
+  .quizInfo{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: none;
+    cursor: default;
+  }
+
+  .iconSize {
+    font-size: 25px;
+  }
+
+  .time-info{
+    font-size: 25px !important;
+    top: 10px !important;
+  }
+
+  .question-no-info{
+    font-size: 25px !important;
+    top: -30px !important;
+  }
+
+  .box:hover .quizInfo{
+    display: block;
+  }
+
+  .hideDesc{
+    display: block;
+  }
+
+  .box:hover .hideDesc{
+    opacity: 0;
+  }
